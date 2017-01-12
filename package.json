@@ -1,0 +1,31 @@
+{
+  "name": "oss",
+  "version": "1.0.0",
+  "description": "The Platzi Open Source Software published packages.",
+  "main": "server.js",
+  "scripts": {
+    "build": "next build",
+    "start": "node server.js",
+    "prestart:prod": "npm run build",
+    "start:prod": "NODE_ENV=production node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PlatziDev/oss.git"
+  },
+  "keywords": ["platzi", "oss", "next", "react"],
+  "author": "Sergio Daniel Xalambrí <colo@platzi.com> (http://sergio.xalambri.xyz/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PlatziDev/oss/issues"
+  },
+  "homepage": "https://oss.platzi.com/",
+  "dependencies": {
+    "express": "4.14.0",
+    "immutable": "3.8.1",
+    "isomorphic-fetch": "2.2.1",
+    "lru-cache": "4.0.2",
+    "next": "2.0.0-beta.16",
+    "react": "15.4.1"
+  }
+}
