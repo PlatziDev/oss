@@ -6,6 +6,9 @@ const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dir: '.', dev });
 const handle = app.getRequestHandler();
 
+const PORT = process.env.PORT || 3000;
+const HOST = process.env.HOST || 'localhost';
+
 const ssrCache = new LRUCache({
   max: 100,
   maxAge: 1000 * 60 * 60,
@@ -43,9 +46,9 @@ app.prepare()
     return handle(req, res);
   });
 
-  server.listen(process.env.PORT || 3000, (err) => {
+  server.listen(PORT, HOST, (err) => {
     if (err) throw err;
-    console.log(`> Ready on http://localhost:${process.env.PORT || 3000}/`);
+    console.log(`> Ready on http://${HOST}:${PORT}/`);
   });
 })
 .catch(error => {
