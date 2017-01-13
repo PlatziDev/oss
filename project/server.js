@@ -37,9 +37,24 @@ app.prepare()
 .then(() => {
   const server = express();
 
+  server.get('/repo/:name', (req, res) => {
+    const params = Object.assign(
+      req.query,
+      req.params
+    );
+
+    if (dev) return app.render(req, res, '/repo', params);
+    return renderAndCache(req, res, '/repo', params);
+  });
+
   server.get('/', (req, res) => {
-    if (dev) return handle(req, res);
-    return renderAndCache(req, res, '/', req.query);
+    const params = Object.assign(
+      req.query,
+      req.params
+    );
+
+    if (dev) return app.render(req, res, '/', params);
+    return renderAndCache(req, res, '/', params);
   });
 
   server.get('*', (req, res) => {

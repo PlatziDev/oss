@@ -1,13 +1,19 @@
 import React from 'react';
+import Link from 'next/prefetch';
 
 
 function Repository(props) {
   return (
     <article className="row">
       <h2 className="col-xs-12 col-sm-4 col-md-3">
-        <a href={props.html_url} target="_blank" rel="nofollow">
-          {props.name}
-        </a>
+        <Link
+          href={`/repo?name=${props.name}`}
+          as={`/repo/${props.name}`}
+          target="_blank"
+          rel="nofollow"
+        >
+          <a>{props.name}</a>
+        </Link>
       </h2>
 
       <p className="col-xs-9 col-sm-7">
