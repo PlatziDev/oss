@@ -15,6 +15,9 @@ function Markdown(props) {
         </a>
       </article>
       <style jsx global>{`
+        #markdown {
+          color: #3a3c3f;
+        }
         #markdown h1 {
           border-bottom: 1px solid #3a3c3f;
           font-size: 2rem;
@@ -25,6 +28,9 @@ function Markdown(props) {
           color: white;
           margin: 0 -1rem;
           padding: .5rem 1rem;
+        }
+        #markdown a {
+          color: #058ecd;
         }
       `}</style>
       <style jsx>{`
