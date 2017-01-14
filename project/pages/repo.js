@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/prefetch';
 import React, { Component } from 'react';
 import { atob } from 'abab';
 import 'isomorphic-fetch';
@@ -132,14 +133,16 @@ class Repo extends Component {
         </Head>
 
         <header>
-          <figure>
-            <img
-              alt="Platzi"
-              src="/static/logo.svg"
-              height="72"
-              width="230"
-            />
-          </figure>
+          <Link href="/">
+            <figure>
+              <img
+                alt="Platzi"
+                src="/static/logo.svg"
+                height="72"
+                width="230"
+              />
+            </figure>
+          </Link>
           <h1>Open Source Software</h1>
         </header>
 
