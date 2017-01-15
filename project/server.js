@@ -11,7 +11,7 @@ const HOST = process.env.HOST || 'localhost';
 
 const ssrCache = new LRUCache({
   max: 100,
-  maxAge: 1000 * 60 * 60,
+  maxAge: 1000 * 60 * 60 * 24,
 });
 
 function renderAndCache(req, res, pagePath, queryParams) {
