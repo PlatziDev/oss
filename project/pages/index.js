@@ -6,12 +6,12 @@ import 'isomorphic-fetch';
 
 import RepositoryList from '../components/RepositoryList';
 
+import { P_PROT, P_HOST, P_PORT } from '../constants';
+
 
 class Home extends Component {
   static async getInitialProps() {
-    const response = await fetch(
-      'https://api.github.com/orgs/PlatziDev/repos?type=public'
-    );
+    const response = await fetch(`${P_PROT}://${P_HOST}:${P_PORT}/api/repos`);
     const repos = await response.json();
     return { repos };
   }

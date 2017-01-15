@@ -6,11 +6,13 @@ import 'isomorphic-fetch';
 
 import Detail from '../components/Detail';
 
+import { P_PROT, P_HOST, P_PORT } from '../constants';
+
 
 class Repo extends Component {
   static async getInitialProps(context) {
     const response = await fetch(
-      `https://api.github.com/repos/PlatziDev/${context.query.name}/readme`
+      `${P_PROT}://${P_HOST}:${P_PORT}/api/repos/${context.query.name}`
     );
     const { content } = await response.json();
     return { content, name: context.query.name };
