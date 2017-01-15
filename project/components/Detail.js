@@ -1,12 +1,12 @@
 import React from 'react';
-import MarkdownContent from '@platzi/react-markdown';
+import Markdown from '@platzi/react-markdown';
 
 
-function Markdown(props) {
+function Detail(props) {
   return (
     <section>
       <article>
-        <MarkdownContent
+        <Markdown
           id="markdown"
           content={props.content}
         />
@@ -58,4 +58,4 @@ function Markdown(props) {
 }
 
 
-export default Markdown;
+export default Detail;

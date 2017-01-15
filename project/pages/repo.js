@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { atob } from 'abab';
 import 'isomorphic-fetch';
 
-import Markdown from '../components/Markdown';
+import Detail from '../components/Detail';
 
 
 class Repo extends Component {
@@ -146,7 +146,10 @@ class Repo extends Component {
           <h1>Open Source Software</h1>
         </header>
 
-        <Markdown content={this.content} name={this.props.name} />
+        <Detail
+          content={this.content}
+          name={this.props.name}
+        />
 
         <style jsx global>{`
           body {
