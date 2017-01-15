@@ -104,7 +104,7 @@ app.prepare()
       res,
       `https://api.github.com/repos/PlatziDev/${name}/readme`
     );
-  })
+  });
 
 
   /**
