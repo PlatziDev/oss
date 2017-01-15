@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "cd ./project && node ./server.js",
     "prestart:prod": "npm run build",
-    "start:prod": "NODE_ENV=production PORT=8000 HOST=0.0.0.0 node server.js"
+    "start:prod": "NODE_ENV=production PORT=8000 HOST=0.0.0.0 P_PROT=https P_HOST=oss.platzi.com P_PORT=80 node server.js"
   },
   "repository": {
     "type": "git",
