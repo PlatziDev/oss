@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "build": "next build",
-    "start": "node ./project/server.js",
+    "start": "cd ./project && node ./server.js",
     "prestart:prod": "npm run build",
     "start:prod": "NODE_ENV=production PORT=8000 HOST=0.0.0.0 node server.js"
   },
