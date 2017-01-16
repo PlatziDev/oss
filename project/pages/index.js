@@ -133,16 +133,16 @@ class Home extends Component {
         </Head>
 
         <header>
-          <Link href="/">
-            <figure>
+          <figure>
+            <Link href="/">
               <img
                 alt="Platzi"
                 src="/static/logo.svg"
                 height="72"
                 width="230"
               />
-            </figure>
-          </Link>
+            </Link>
+          </figure>
           <h1>Open Source Software</h1>
         </header>
 
