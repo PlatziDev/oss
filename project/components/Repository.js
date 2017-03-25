@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/prefetch';
+import Link from 'next/link';
 
 
 function Repository(props) {
@@ -7,7 +7,12 @@ function Repository(props) {
     <article className="row">
       <h2 className="col-xs-12 col-sm-4 col-md-3">
         <Link
-          href={`/repo?name=${props.name}`}
+          href={{
+            pathname: '/repo',
+            query: {
+              name: props.name,
+            },
+          }}
           as={`/repo/${props.name}`}
           target="_blank"
           rel="nofollow"

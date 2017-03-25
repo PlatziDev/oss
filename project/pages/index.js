@@ -8,7 +8,6 @@ import RepositoryList from '../components/RepositoryList';
 
 import { P_PROT, P_HOST, P_PORT } from '../constants';
 
-
 class Home extends Component {
   static async getInitialProps() {
     const response = await fetch(`${P_PROT}://${P_HOST}:${P_PORT}/api/repos`);
@@ -24,123 +23,13 @@ class Home extends Component {
     return (
       <section id="OSS">
         <Head>
-          <meta charSet="utf-8" />
           <title>Platzi - Open Source Software</title>
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1"
-          />
-          <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"
-          />
-          <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-          />
-          <meta
-            name="description"
-            content="The Platzi Open Source Software published packages."
-          />
-          <meta
-            name="language"
-            content="en"
-          />
-          <meta
-            name="author"
-            content="Platzi"
-          />
-          <meta
-            name="pagename"
-            content="Platzi - Open Source Software"
-          />
-          <meta
-            name="HandheldFriendly"
-            content="True"
-          />
-          <meta
-            name="MobileOptimized"
-            content="320"
-          />
-          <meta
-            name="apple-mobile-web-app-title"
-            content="Platzi - Open Source Software"
-          />
-          <meta
-            content="IE=edge,chrome=1"
-            http-equiv="X-UA-Compatible"
-          />
-          <meta
-            name="twitter:card"
-            value="summary"
-          />
-          <meta
-            name="twitter:site"
-            value="@PlatziTeam"
-          />
-          <meta
-            name="twitter:creator"
-            value="@PlatziTeam"
-          />
-          <meta
-            name="twitter:url"
-            value="https://oss.platzi.com/"
-          />
-          <meta
-            name="twitter:title"
-            value="Platzi - Open Source Software"
-          />
-          <meta
-            name="twitter:description"
-            value="The Platzi Open Source Software published packages."
-          />
-          <meta
-            name="twitter:image"
-            value=""
-          />
-          <meta
-            name="twitter:summary"
-            value="The Platzi Open Source Software published packages."
-          />
-          <meta
-            property="og:type"
-            content="website"
-          />
-          <meta
-            property="og:title"
-            content="Platzi - Open Source Software"
-          />
-          <meta
-            property="og:description"
-            content="The Platzi Open Source Software published packages."
-          />
-          <meta
-            property="og:image"
-            content=""
-          />
-          <meta
-            property="og:url"
-            content="http://sergio.xalambri.xyz/"
-          />
-          <meta
-            property="og:site_name"
-            content="Platzi - Open Source Software"
-          />
-          <meta
-            property="og:locale"
-            content="en"
-          />
         </Head>
 
         <header>
           <figure>
             <Link href="/">
-              <img
-                alt="Platzi"
-                src="/static/logo.svg"
-                height="72"
-                width="230"
-              />
+              <img alt="Platzi" src="/static/logo.svg" height="72" width="230" />
             </Link>
           </figure>
           <h1>Open Source Software</h1>
@@ -181,6 +70,5 @@ class Home extends Component {
     );
   }
 }
-
 
 export default Home;
