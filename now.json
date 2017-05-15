@@ -1,0 +1,11 @@
+{
+  "name": "platzi-oss",
+  "alias": "platzi-oss.now.sh",
+  "env": {
+    "NODE_ENV": "production",
+    "PORT": "3000",
+    "HOST": "localhost",
+    "URL": "https://oss.platzi.com"
+  },
+  "type": "npm"
+}

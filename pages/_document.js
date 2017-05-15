@@ -57,5 +57,4 @@ class PlatziOSS extends Document {
   }
 }
 
-
 export default PlatziOSS;

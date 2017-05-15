@@ -1,15 +1,10 @@
-import React from 'react';
 import Markdown from '@platzi/react-markdown';
-
 
 function Detail(props) {
   return (
     <section>
       <article>
-        <Markdown
-          id="markdown"
-          content={props.content}
-        />
+        <Markdown id="markdown" content={props.content} />
         <a href={`https://github.com/PlatziDev/${props.name}`} target="_blank">
           <i className="fa fa-github" />
         </a>
@@ -56,6 +51,5 @@ function Detail(props) {
     </section>
   );
 }
-
 
 export default Detail;

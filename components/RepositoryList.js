@@ -1,6 +1,5 @@
 import Repository from './Repository';
 
-
 function RepositoryList(props) {
   return (
     <section id="repos">
@@ -8,8 +7,7 @@ function RepositoryList(props) {
         .sortBy(repo => repo.stargazers_count)
         .reverse()
         .map(repo => <Repository {...repo} key={repo.id} />)
-        .toArray()
-      }
+        .toArray()}
       <style jsx>{`
         section {
           margin: 0 auto 2rem;
@@ -19,6 +17,5 @@ function RepositoryList(props) {
     </section>
   );
 }
-
 
 export default RepositoryList;

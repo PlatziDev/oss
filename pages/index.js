@@ -1,29 +1,29 @@
 import Head from 'next/head';
-import Link from 'next/prefetch';
-import React, { Component } from 'react';
-import { atob } from 'abab';
+import Link from 'next/link';
+import { Component } from 'react';
+import { List as list } from 'immutable';
 import 'isomorphic-fetch';
 
-import Detail from '../components/Detail';
+import RepositoryList from '../components/RepositoryList';
 
-import { P_PROT, P_HOST, P_PORT } from '../constants';
+import { URL } from '../constants';
 
-class Repo extends Component {
-  static async getInitialProps(context) {
-    const response = await fetch(`${P_PROT}://${P_HOST}:${P_PORT}/api/repos/${context.query.name}`);
-    const { content } = await response.json();
-    return { content, name: context.query.name };
+class Home extends Component {
+  static async getInitialProps() {
+    const response = await fetch(`${URL}/api/repos`);
+    const repos = await response.json();
+    return { repos };
   }
 
-  get content() {
-    return atob(this.props.content);
+  get repos() {
+    return list(this.props.repos);
   }
 
   render() {
     return (
       <section id="OSS">
         <Head>
-          <title>Platzi - {this.props.name}</title>
+          <title>Platzi - Open Source Software</title>
         </Head>
 
         <header>
@@ -35,7 +35,7 @@ class Repo extends Component {
           <h1>Open Source Software</h1>
         </header>
 
-        <Detail content={this.content} name={this.props.name} />
+        <RepositoryList list={this.repos} />
 
         <style jsx global>{`
           body {
@@ -71,4 +71,4 @@ class Repo extends Component {
   }
 }
 
-export default Repo;
+export default Home;

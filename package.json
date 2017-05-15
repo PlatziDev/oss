@@ -4,10 +4,9 @@
   "description": "The Platzi Open Source Software published packages.",
   "main": "server.js",
   "scripts": {
+    "dev": "node .",
     "build": "next build",
-    "start": "cd ./project && node ./server.js",
-    "prestart:prod": "npm run build",
-    "start:prod": "NODE_ENV=production PORT=8000 HOST=0.0.0.0 P_PROT=https P_HOST=oss.platzi.com P_PORT=80 node server.js"
+    "start": "node ."
   },
   "repository": {
     "type": "git",
@@ -24,6 +23,7 @@
   "bugs": {
     "url": "https://github.com/PlatziDev/oss/issues"
   },
+  "private": true,
   "homepage": "https://oss.platzi.com/",
   "dependencies": {
     "@platzi/react-markdown": "1.0.2",
@@ -32,8 +32,11 @@
     "immutable": "3.8.1",
     "isomorphic-fetch": "2.2.1",
     "lru-cache": "4.0.2",
-    "next": "beta",
+    "next": "^2.3.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }

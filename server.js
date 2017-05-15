@@ -120,7 +120,6 @@ app.prepare()
 
   /**
    * Render the list of repos (if is not dev use cache)
-   * @type {[type]}
    */
   server.get('/', (req, res) => {
     const params = Object.assign(req.query, req.params);
